@@ -1,10 +1,10 @@
 # Consignes :
 
-Reproduire le formulaire `screen.png` pour une vue : Desktop (gestion du widescreen), Tablette, Mobile en l'adaptant à votre goût pour que le formulaire soit utilisable et ergonomique sur tous les devices.
+Forkez le projet et reproduire le formulaire `screen.png` (uniquement la page web, pas le background en pointillé ni les couleurs sur la droite) pour une vue : Desktop (gestion du widescreen), Tablette, Mobile en l'adaptant à votre goût pour que le formulaire soit utilisable et ergonomique sur tous les devices.
 
 Vous êtes libres d'utiliser les libraries (JS / CSS / HTML) que vous souhaitez.
 
-Les assets et images ne sont pas fournies. Réutilisez une bibliothèque d'icônes et des screens de l'image existante pour intégrer les logos.
+Les assets et images ne sont pas fournies. Réutilisez une bibliothèque d'icônes et si besoin des screens de l'image existante pour intégrer les logos.
 
 Les deux encarts sont des menus déroulants lorsque l'on clique sur les headers (titre + flèche en haut à droite).
 
@@ -22,6 +22,6 @@ Le deuxième encart dispose :
 
 Sauvegarder active un console.log() qui loggera toutes les variables du formulaire dans la console, ainsi qu'une modale de validation utilisant la librarie : https://sweetalert2.github.io/
 
-Merci de rentre le maximum pour 18h00 via une pull request sur le repository. La PR devra contenir des commits clair et concis.
+Merci de me renvoyer le lien de votre fork (repository public).
 
 Typographies : Pluto / OpenSans.
