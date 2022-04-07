@@ -1,176 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/app.css">
-</head>
-<body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="images/header_logo.PNG" alt="" width="130" height="70" class="d-inline-block align-text-top">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <div class="row">
-                                Adopte un
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4 offset-md-2 text-uppercase h3">
-                                    lounge
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <form>
-            <fieldset>
-                <legend>Nouvel évènement</legend>
-                <div class="accordion" id="accordionPanelEvent" style="border: 1px solid blue;">
-                    <div class="accordion-item">
-                        <h6 class="accordion-header" id="panelsStayOpen-eventHeading">
-                            <span class="accordion-button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-eventCollapse" aria-expanded="true" aria-controls="panelsStayOpen-eventCollapse"></span>
-                            <span class="d-flex justify-content-center">Disponibilité des lounges</span>
-                        </h6>
-                        <div id="panelsStayOpen-eventCollapse" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-eventHeading">
-                            <div class="accordion-body">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.min.css"
+              integrity="sha512-cyIcYOviYhF0bHIhzXWJQ/7xnaBuIIOecYoPZBgJHQKFPo+TOBA+BY1EnTpmM8yKDU4ZdI3UGccNGCEUdfbBqw=="
+              crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/header_logo.PNG" alt="" class="d-inline-block align-text-top logo-header">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="row" style="border-right: 1px solid #c5bdbd;">
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-4">
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <label for="date" class="form-label">Date</label>
+                                    Adopte un
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4 offset-md-2 text-uppercase h3">
+                                        lounge
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <form>
+                <fieldset>
+                    <legend>Nouvel évènement</legend>
+                    <div class="accordion shadow" id="accordionPanelEvent" style="border: 1px solid blue;">
+                        <div class="accordion-item">
+                            <h6 class="accordion-header" id="panelsStayOpen-eventHeading">
+                                <span class="accordion-button" data-bs-toggle="collapse"
+                                      data-bs-target="#panelsStayOpen-eventCollapse" aria-expanded="true"
+                                      aria-controls="panelsStayOpen-eventCollapse"></span>
+                                <span class="d-flex justify-content-center">Disponibilité des lounges</span>
+                            </h6>
+                            <div id="panelsStayOpen-eventCollapse" class="accordion-collapse collapse show"
+                                 aria-labelledby="panelsStayOpen-eventHeading">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row" style="border-right: 1px solid #c5bdbd;">
+                                                <div class="col-md-4"></div>
+                                                <div class="col-md-2"></div>
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label for="date" class="form-label">Date :</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="text" name="date" class="form-control" id="date" required>
+                                                            <div id="invalid-date" class="required-field" style="display: none;">
+                                                                Please provide a valid date.
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-md-9">
-                                                        <input type="date" class="form-control" id="date">
+                                                    <div class="row mt-2">
+                                                        <div class="col-md-3">
+                                                            <label for="hour" class="form-label">Heure :</label>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <input type="text" name="hour" class="form-control" id="hour" required>
+                                                            <div id="invalid-time" class="required-field" style="display: none;">
+                                                                Please provide a valid time.
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="row mt-2">
-                                                    <div class="col-md-3">
-                                                        <label for="hour" class="form-label">Heure</label>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="time" class="form-control" id="hour">
-                                                    </div>
+
                                                 </div>
 
                                             </div>
-
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="lounge" id="lounge4" value="Lounge du 4ème étage" checked>
-                                            <label class="form-check-label" for="lounge4">
-                                                Lounge du 4ème étage
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="lounge" id="lounge5" value="Lounge du 5ème étage">
-                                            <label class="form-check-label" for="lounge5">
-                                                Lounge du 5ème étage
-                                            </label>
-                                        </div>
-                                        <div class="form-check disabled">
-                                            <input class="form-check-input" type="radio" name="lounge" id="lounge6" value="Lounge du 6ème étage" disabled>
-                                            <label class="form-check-label" for="lounge6">
-                                                Lounge du 6ème étage
-                                            </label>
+                                        <div class="col-md-6 ml-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="lounge" id="lounge4"
+                                                       value="Lounge du 4ème étage" checked>
+                                                <label class="form-check-label" for="lounge4">
+                                                    Lounge du 4ème étage
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="lounge" id="lounge5"
+                                                       value="Lounge du 5ème étage">
+                                                <label class="form-check-label" for="lounge5">
+                                                    Lounge du 5ème étage
+                                                </label>
+                                            </div>
+                                            <div class="form-check disabled">
+                                                <input class="form-check-input" type="radio" name="lounge" id="lounge6"
+                                                       value="Lounge du 6ème étage" disabled>
+                                                <label class="form-check-label" for="lounge6">
+                                                    Lounge du 6ème étage
+                                                </label>
+                                            </div>
+                                            <div id="required-lounge" class="required-field" style="display: none;">
+                                                Lounge is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion mt-3" id="accordionPanelInfo">
-                <div class="accordion-item">
-                    <h6 class="accordion-header" id="panelsStayOpen-infoHeading">
-                        <span class="accordion-button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-infoCollapse" aria-expanded="true" aria-controls="panelsStayOpen-infoCollapse">
-                            <strong>Informations</strong><br />
-                        </span>
-                    </h6>
-                    <div style="margin-left: 1.5%;margin-top: -0.5%;">pour identifier votre évènement</div>
-                    <div id="panelsStayOpen-infoCollapse" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-infoHeading">
-                        <div class="accordion-body">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <label for="interEvent"></label>
-                                        <input type="text" class="form-control" id="interEvent">
+                    <div class="accordion mt-3 shadow" id="accordionPanelInfo">
+                    <div class="accordion-item">
+                        <h6 class="accordion-header" id="panelsStayOpen-infoHeading">
+                            <span class="accordion-button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-infoCollapse"
+                                  aria-expanded="true" aria-controls="panelsStayOpen-infoCollapse">
+                                <strong>Informations</strong><br />
+                            </span>
+                        </h6>
+                        <div style="margin-left: 1.5%;margin-top: -0.5%;">pour identifier votre évènement</div>
+                        <div id="panelsStayOpen-infoCollapse" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-infoHeading">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="interEvent"></label>
+                                            <select class="selectpicker rounded" name="interEvent" id="interEvent" multiple>
+                                                    <option selected disabled hidden
+                                                            data-content="<div><i class='fa fa-users p-2'></i> EVENEMENT INTERNE</div>"></option>
+                                                    <option value="conferences">Conférences</option>
+                                                    <option value="rencontres">rencontres d'équipes</option>
+                                                    <option value="other">autres</option>
+                                            </select>
+                                            <div id="required-interEvent" class="required-field" style="display: none;">
+                                                Intern event is required.
+                                            </div>
+                                        </div>
+                                        <div class="form-group my-3">
+                                            <label for="eventName">Nom de votre évènement</label>
+                                            <input type="text" name="eventName" class="form-control" id="eventName">
+                                            <div id="required-eventName" class="required-field" style="display: none;">
+                                                Event name is required.
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nbParticipants">Nombre de participants</label>
+                                            <input type="number" name="nbParticipants" min="0" max="10" class="form-control" id="nbParticipants">
+                                            <div id="required-nbParticipants" class="required-field" style="display: none;">
+                                                Nb participants is required.
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="eventNom">Nom de votre évènement</label>
-                                        <input type="text" class="form-control" id="eventNom">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="description">Description</label>
+                                            <textarea class="form-control" id="description" name="description" rows="8"></textarea>
+                                            <div id="required-description" class="required-field" style="display: none;">
+                                                Description is required.
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="nbParticipants">Nombre de participants</label>
-                                        <input type="number" min="0" max="10" class="form-control" id="nbParticipants">
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <label for="description">Description</label>
-                                        <textarea class="form-control" id="description" rows="6"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <label for="lastname">Votre nom</label>
-                                        <input type="text" class="form-control" id="lastname">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="firstname">Votre prénom</label>
-                                        <input type="text" class="form-control" id="firstname">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="direction">Votre direction</label>
-                                        <select name="direction" class="form-control" id="direction">
-                                            <option></option>
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                        </select>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="lastname">Votre nom</label>
+                                            <input type="text" class="form-control" name="lastname" id="lastname">
+                                            <div id="required-lastname" class="required-field" style="display: none;">
+                                                Lastname is required.
+                                            </div>
+                                        </div>
+                                        <div class="form-group my-3">
+                                            <label for="firstname">Votre prénom</label>
+                                            <input type="text" class="form-control" name="firstname" id="firstname">
+                                            <div id="required-firstname" class="required-field" style="display: none;">
+                                                FirstName is required.
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="direction">Votre direction</label>
+                                            <select name="direction" class="form-select" id="direction">
+                                                <option></option>
+                                                <option value="option1">Option 1</option>
+                                                <option value="option2">Option 2</option>
+                                            </select>
+                                            <div id="required-direction" class="required-field" style="display: none;">
+                                                Direction is required.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" id="save" class="btn btn-success mb-3">Sauvegarder</button>
+                        <div class="text-center">
+                            <button type="button" onclick="showSweetAlert()" id="save" class="btn btn-success mb-3">Sauvegarder</button>
+                        </div>
                     </div>
                 </div>
+                </fieldset>
+            </form>
+            <div class="float-end mt-4">
+                <img src="images/footer_logo.PNG" alt="" class="logo-footer">
             </div>
-            </fieldset>
-        </form>
-        <div class="float-end">
-            <img src="images/footer_logo.PNG" alt="" width="130" height="70">
         </div>
-    </div>
 
-    <script  type="text/javascript" src="js/jquery-3.6.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
-<!--    <script type="text/javascript">-->
-<!--        $(document).ready(function(){-->
-<!--            $('#save').submit(function (event) {-->
-<!--                event.preventDefault();-->
-<!--                console.log('momo');-->
-<!--            });-->
-<!--        });-->
-<!--    </script>-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
-</body>
+        <script src="js/app.js"></script>
+    </body>
 </html>
