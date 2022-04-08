@@ -88,9 +88,9 @@ function showSweetAlert() {
         $('#required-direction').show();
     }
 
-    if (date !== '' && time !=='' && lounge !== '' && eventName !== ''
-        && nbParticipants !== '' && description !== '' && firstname !== ''
-        && lastname !== '' && direction !== '') {
+    if (date !== '' && time !=='' && interEvent.length !== 0 && lounge !== ''
+        && eventName !== '' && nbParticipants !== '' && description !== ''
+        && firstname !== '' && lastname !== '' && direction !== '') {
 
         $.ajax({
             url: "form_validation.php",
@@ -108,6 +108,15 @@ function showSweetAlert() {
                 direction: direction
             },
             success: function (response) {
+                $('#required-lounge').hide();
+                $('#required-interEvent').hide();
+                $('#required-eventName').hide();
+                $('#required-nbParticipants').hide();
+                $('#required-description').hide();
+                $('#required-firstname').hide();
+                $('#required-lastname').hide();
+                $('#required-direction').hide();
+
                 if(interEvent.length !== 0) {
                     console.log('Evènement interne : ');
                     interEvent.forEach(function (item) {
@@ -133,16 +142,6 @@ function showSweetAlert() {
                 console.log(textStatus, errorThrown);
             }
         });
-
-        $('#required-lounge').hide();
-        $('#required-interEvent').hide();
-        $('#required-eventName').hide();
-        $('#required-nbParticipants').hide();
-        $('#required-description').hide();
-        $('#required-firstname').hide();
-        $('#required-lastname').hide();
-        $('#required-direction').hide();
-
 
     }
 
