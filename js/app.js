@@ -51,14 +51,12 @@ function showSweetAlert() {
 
     if (date !== '' && dateValidation(date) === true) {
         $('#invalid-date').hide();
-        console.log('Date : ', date);
     } else {
         $('#invalid-date').show();
     }
 
     if (time !== '' && timeValidation(time) === true) {
         $('#invalid-time').hide();
-        console.log('Time : ', time);
     } else {
         $('#invalid-time').show();
     }
@@ -124,7 +122,10 @@ function showSweetAlert() {
                     });
                 }
 
-                console.log('Evènement : ' + eventName
+                console.log(
+                    'Time : ' +  time
+                    , 'Date : ' + date
+                    , 'Evènement : ' + eventName
                     , '\nNombre de participants : ' + nbParticipants
                     , '\nDescription : ' + description
                     , '\nNom : ' + firstname
