@@ -1,3 +1,9 @@
+# Instructions :
+
+Vous avez besoin d'aucune installation pour faire tourner la page. J'ai utilisé les cdn pour les JS et CSS.
+
+J'ai plutôt pensé au resultat final qu'à l'optimisation du code sinon je pourrais le faire autrement en explorant par exemple $('form').validate() avec la gestions des rules.
+
 # Consignes :
 
 Forkez le projet et reproduire le formulaire `screen.png` (uniquement la page web, pas le background en pointillé ni les couleurs sur la droite) pour une vue : Desktop (gestion du widescreen), Tablette, Mobile en l'adaptant à votre goût pour que le formulaire soit utilisable et ergonomique sur tous les devices.
