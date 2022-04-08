@@ -91,6 +91,49 @@ function showSweetAlert() {
     if (date !== '' && time !=='' && lounge !== '' && eventName !== ''
         && nbParticipants !== '' && description !== '' && firstname !== ''
         && lastname !== '' && direction !== '') {
+
+        $.ajax({
+            url: "form_validation.php",
+            type: "POST",
+            data: {
+                date: date,
+                time: time,
+                lounge: lounge,
+                interEvent: interEvent,
+                eventName: eventName,
+                nbParticipants: nbParticipants,
+                description: description,
+                firstname: firstname,
+                lastname: lastname,
+                direction: direction
+            },
+            success: function (response) {
+                if(interEvent.length !== 0) {
+                    console.log('Evènement interne : ');
+                    interEvent.forEach(function (item) {
+                        console.log('\n- ' + item);
+                    });
+                }
+
+                console.log('Evènement : ' + eventName
+                    , '\nNombre de participants : ' + nbParticipants
+                    , '\nDescription : ' + description
+                    , '\nNom : ' + firstname
+                    , '\nPrénom : ' + lastname
+                    , '\nDirection : ' + direction
+                    , '\nLoung : ' + lounge);
+
+                Swal.fire(
+                    'Form validated',
+                    '',
+                    'success'
+                );
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(textStatus, errorThrown);
+            }
+        });
+
         $('#required-lounge').hide();
         $('#required-interEvent').hide();
         $('#required-eventName').hide();
@@ -100,26 +143,7 @@ function showSweetAlert() {
         $('#required-lastname').hide();
         $('#required-direction').hide();
 
-        if(interEvent.length !== 0) {
-            console.log('Evènement interne : ');
-            interEvent.forEach(function (item) {
-                console.log('\n- ' + item);
-            });
-        }
 
-        console.log('Evènement : ' + eventName
-            , '\nNombre de participants : ' + nbParticipants
-            , '\nDescription : ' + description
-            , '\nNom : ' + firstname
-            , '\nPrénom : ' + lastname
-            , '\nDirection : ' + direction
-            , '\nLoung : ' + lounge);
-
-        Swal.fire(
-            'Form validated',
-            '',
-            'success'
-        );
     }
 
 }
