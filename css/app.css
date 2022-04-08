@@ -8,6 +8,11 @@
     height: 60px;
 }
 
+img.trait {
+    width: 100%;
+    height: 20px;
+}
+
 body {
     font-family: "PT Sans, Open Sans", sans-serif;
 }
