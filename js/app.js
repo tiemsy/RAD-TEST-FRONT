@@ -70,7 +70,7 @@ function showSweetAlert() {
         $('#required-direction').show();
     }
 
-    if (lounge !== '' && eventName !== ''
+    if (date !== '' && time !=='' && lounge !== '' && eventName !== ''
         && nbParticipants !== '' && description !== '' && firstname !== ''
         && lastname !== '' && direction !== '') {
         $('#required-lounge').hide();
