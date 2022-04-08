@@ -63,27 +63,50 @@ function showSweetAlert() {
 
     if (lounge === '') {
         $('#required-lounge').show();
+    } else {
+        $('#required-lounge').hide();
     }
+
     if (interEvent.length === 0) {
         $('#required-interEvent').show();
+    } else {
+        $('#required-interEvent').hide();
     }
+
     if (eventName === '') {
         $('#required-eventName').show();
+    } else {
+        $('#required-eventName').hide();
     }
+
     if (nbParticipants === '') {
         $('#required-nbParticipants').show();
+    } else {
+        $('#required-nbParticipants').hide();
     }
+
     if (description === '') {
         $('#required-description').show();
+    } else {
+        $('#required-description').hide();
     }
+
     if (firstname === '') {
         $('#required-firstname').show();
+    } else {
+        $('#required-firstname').hide();
     }
+
     if (lastname === '') {
         $('#required-lastname').show();
+    } else {
+        $('#required-lastname').hide();
     }
+
     if (direction === '') {
         $('#required-direction').show();
+    } else {
+        $('#required-direction').hide();
     }
 
     if (date !== '' && time !=='' && interEvent.length !== 0 && lounge !== ''
@@ -106,19 +129,10 @@ function showSweetAlert() {
                 direction: direction
             },
             success: function (response) {
-                $('#required-lounge').hide();
-                $('#required-interEvent').hide();
-                $('#required-eventName').hide();
-                $('#required-nbParticipants').hide();
-                $('#required-description').hide();
-                $('#required-firstname').hide();
-                $('#required-lastname').hide();
-                $('#required-direction').hide();
-
                 console.log(
                     'Time : ' +  time
-                    , 'Date : ' + date
-                    , 'Evènement : ' + eventName
+                    , '\nDate : ' + date
+                    , '\nEvènement : ' + eventName
                     , '\nNombre de participants : ' + nbParticipants
                     , '\nDescription : ' + description
                     , '\nNom : ' + firstname
