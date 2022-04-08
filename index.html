@@ -171,14 +171,14 @@
                                     <div class="col-4">
                                         <div class="form-group">
                                             <label for="lastname">Votre nom</label>
-                                            <input type="text" class="form-control" name="lastname" id="lastname">
+                                            <input type="text" class="form-control" name="lastname" id="lastname" onchange="textToUpper()">
                                             <div id="required-lastname" class="required-field" style="display: none;">
                                                 Lastname is required.
                                             </div>
                                         </div>
                                         <div class="form-group my-3">
                                             <label for="firstname">Votre prénom</label>
-                                            <input type="text" class="form-control" name="firstname" id="firstname">
+                                            <input type="text" class="form-control" name="firstname" id="firstname" onchange="textToCapitalize()">
                                             <div id="required-firstname" class="required-field" style="display: none;">
                                                 FirstName is required.
                                             </div>

@@ -1,3 +1,21 @@
+
+function textToUpper()
+{
+    let lastname = $("form #lastname").val();
+
+    $("form #lastname").val(lastname.toUpperCase());
+}
+
+function textToCapitalize()
+{
+    let firstname = $("form #firstname").val();
+    let new_firstname = firstname.toLowerCase().replace(/\b[a-z]/g, function(txtVal) {
+        return txtVal.toUpperCase();
+    });
+
+    $("form #firstname").val(new_firstname);
+}
+
 function dateValidation(date)
 {
     let date_regex = /^(0?[1-9]|[12][0-9]|3[0-1])[/., -](0?[1-9]|1[0-2])[/., -](19|20)?\d{2}$/;
