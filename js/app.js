@@ -115,13 +115,6 @@ function showSweetAlert() {
                 $('#required-lastname').hide();
                 $('#required-direction').hide();
 
-                if(interEvent.length !== 0) {
-                    console.log('Evènement interne : ');
-                    interEvent.forEach(function (item) {
-                        console.log('\n- ' + item);
-                    });
-                }
-
                 console.log(
                     'Time : ' +  time
                     , 'Date : ' + date
@@ -131,7 +124,14 @@ function showSweetAlert() {
                     , '\nNom : ' + firstname
                     , '\nPrénom : ' + lastname
                     , '\nDirection : ' + direction
-                    , '\nLoung : ' + lounge);
+                    , '\nLoung : ' + lounge
+                    , '\nEvènement interne : ');
+
+                if(interEvent.length !== 0) {
+                    interEvent.forEach(function (item) {
+                        console.log('- ' + item);
+                    });
+                }
 
                 Swal.fire(
                     'Form validated',
